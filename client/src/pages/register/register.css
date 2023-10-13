@@ -30,7 +30,8 @@
     background-color: teal;
     border : none;
     color : white;
-    padding: 10 px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 10px;
 }
 .registerLoginButton{
@@ -42,4 +43,5 @@
     border : none;
     color : white;
     border-radius: 10px;
+    padding : 10px;
 }

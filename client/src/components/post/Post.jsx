@@ -1,20 +1,25 @@
-import "./post.css"
+import "./post.css";
+import { Link } from "react-router-dom";
 
-export default function Post() {
+export default function Post({ post }) {
   return (
     <div className="post">
-      <img className="postImg" src="/assets/3.jpg" alt="" />
+      {post.photo && <img className="postImg" src="/assets/3.jpg" alt="" />}
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">Tech</span>
-          <span className="postCat">Finance</span>
+          {post.categories.map((c) => (
+            <span className="postCat">{c.name}</span>
+          ))}
         </div>
-        <span className="postTitle">
-            A new update for slaca with 3.5 sockets
+        <Link to={`/posts/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
+        <hr />
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}{" "}
         </span>
-        <hr/>
-        <span className="postDate">1 hour </span>
       </div>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 }

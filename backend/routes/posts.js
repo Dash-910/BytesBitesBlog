@@ -86,7 +86,7 @@ router.get("/",async(req,res)=>{
         // $in is mongoose provided operator to match values in arrays
       }})
     } else {
-      posts = Post.find();
+      posts = await Post.find();
     }
       res.status(200).json(posts);
   } catch (err){

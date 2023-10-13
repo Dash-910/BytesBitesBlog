@@ -1,30 +1,48 @@
+import { useEffect } from "react";
+import {Link} from "react-router-dom";
 import "./singlePost.css";
+import { useState} from "react";
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+
 
 export default function SinglePost() {
+  const location = useLocation()
+  const path = location.pathname.split("/")[2];
+  const [post,setPost] = useState({});
+
+  useEffect(()=>{
+    const getPost = async () =>{
+      // path var is the id for the post we take out from the location
+      const res = await axios.get("/posts/"+path);
+      setPost(res.data);
+    };
+    getPost();
+  },[path]);
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        <img src="/assets/6.jpg" alt="" className="" />
+        {post.photo && (
+          <img src={post.photo} alt="" className="" />
+        )}
         <h1 className="singlePostTitle">
-          THis is the title for the posts
+          {post.title}
           <div className="singlePostEdit">
-            <i class="singlePostIcon fa-solid fa-pen-to-square"></i>
-            <i class="singlePostIcon fa-solid fa-trash"></i>
+            <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
+            <i className="singlePostIcon fa-solid fa-trash"></i>
           </div>
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
-            Author :<b>Dash</b>
+            Author :
+            <Link to={`/?user=${post.username}`} className="link">
+              <b>{post.username}</b>
+            </Link>
           </span>
-          <span className="singlePostDate">1 hour ago</span>
+          <span className="singlePostDate">{new Date (post.createdAt).toDateString}</span>
         </div>
         <p className="singlePostDesc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-          officiis vero, consectetur excepturi animi velit sed incidunt vitae
-          soluta fugit rerum commodi deleniti temporibus consequuntur totam
-          delectus ipsum autem ipsa quidem quod aliquid neque voluptatibus
-          doloribus voluptates. Pariatur consequuntur suscipit eaque, quia et
-          eum quod!
+          {post.desc}
         </p>
       </div>
     </div>
