@@ -6,11 +6,12 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
-
+const path = require("path");
 const connectToMongo = require("./db");
 
 dotenv.config();
 app.use(express.json());
+app.use("/images",express.static(path.join(__dirname,"/images")));
 
 connectToMongo(); 
 

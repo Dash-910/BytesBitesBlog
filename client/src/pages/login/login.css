@@ -1,12 +1,12 @@
-.login{
-    height : calc(100vh - 50px);
+.login {
+    height: calc(100vh - 50px);
     display: flex;
-    flex-direction : column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color: antiquewhite;
     background-size: cover;
-}
+  }
 .loginTitle{
     font-size : 50px;
 
@@ -27,11 +27,15 @@
 .loginButton{
     margin-top : 20px;
     cursor : pointer;
-    background-color: lightcoral;
+    background-color: rgb(240, 120, 120);
     border : none;
     color : white;
-    padding: 10 px;
+    padding: 10px;
     border-radius: 10px;
+}
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color : rgb(246, 214, 203);
 }
 .loginRegisterButton{
     position : absolute;
@@ -42,4 +46,5 @@
     border : none;
     color : white;
     border-radius: 10px;
+    padding : 10px;
 }

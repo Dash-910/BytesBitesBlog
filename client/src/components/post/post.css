@@ -1,6 +1,10 @@
 .post{
     width : 385px;
     margin: 0px 25px 40px 25px;
+    border : 1px solid black;
+    border-radius: 10px;
+    background-color: #0f0f0f;
+    color:whitesmoke;
 }
 .postImg{
     width:100%;
@@ -33,7 +37,7 @@
     font-family: 'Lora', serif;
     font-style: italic;
     font-size : 13px;
-    color : #999;
+    color : #efe9e9;
     margin-top : 15px;
 }
 .postDesc{
