@@ -4,25 +4,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: rgb(0, 0, 0);
     background-size: cover;
   }
 .loginTitle{
     font-size : 50px;
+    font-family:'Roboto', sans-serif;
+    color: rgb(146, 127, 127);
 
 }
 .loginForm{
     margin-top : 10px;
     display : flex;
     flex-direction: column;
+    font-family:'Roboto', sans-serif;
+    /* border: solid red 2px; */
+    color: rgb(146, 127, 127);
 }
 .loginForm > label{
     margin : 10px 0;
 }
 .loginInput{
     padding : 10px;
-    background-color: white;
+    background-color: rgb(209, 201, 201);
     border:none;
+    font-family:'Roboto', sans-serif;
+    width: 250px;
+    text-decoration: none;
+    border-radius: 4px;
+    outline: none;
 }
 .loginButton{
     margin-top : 20px;
@@ -32,6 +42,13 @@
     color : white;
     padding: 10px;
     border-radius: 10px;
+    font-family:'Roboto', sans-serif;
+    font-size: 17px;
+    transition: background 0.5s,transform 0.5s;
+}
+.loginButton:hover{
+    background-color: rgb(244, 99, 99);
+    transform: translateY(-1px);
 }
 .loginButton:disabled{
     cursor: not-allowed;
@@ -47,4 +64,14 @@
     color : white;
     border-radius: 10px;
     padding : 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 90px;
+    font-family:'Roboto', sans-serif;
+    font-size: 17px;
+    transition: background 0.5s,transform 0.5s;
+}
+.loginRegisterButton:hover{
+    background-color: rgb(6, 92, 92);
+    transform: translateY(-1px);
 }

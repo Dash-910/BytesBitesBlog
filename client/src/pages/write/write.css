@@ -35,6 +35,8 @@
     border : none;
     padding : 20px;
     width : 70vw;
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 .writeInput:focus{
@@ -46,13 +48,23 @@
     height: 100vw;
 }
 .writeSubmit{
-    position: absolute;
+    position : absolute;
     top : 20px;
-    right : 50px;
-    color : white;
+    right : 20px;
     background-color: teal;
-    padding : 10px;
-    border : none ;
+    cursor:pointer;
+    border : none;
+    color : white;
     border-radius: 10px;
-    cursor: pointer;
+    padding : 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 120px;
+    font-family:'Roboto', sans-serif;
+    font-size: 17px;
+}
+.writeSubmit:hover{
+    background-color: rgb(244, 99, 99);
+    transform: translateY(-2px);
+    transition: background 0.5s,transform 0.5s;
 }

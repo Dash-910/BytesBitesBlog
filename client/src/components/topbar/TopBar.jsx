@@ -13,10 +13,8 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fa-brands fa-square-facebook"></i>
-        <i className="topIcon fa-brands fa-square-x-twitter"></i>
-        <i className="topIcon fa-brands fa-pinterest"></i>
-        <i className="topIcon fa-brands fa-square-instagram"></i>
+        {/* <img src="assests/register.jpg" className="logo"/> */}
+        <span className="title">ByteBitesBlog</span>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -40,7 +38,7 @@ export default function TopBar() {
               WRITE
             </Link>
           </li>
-          <li className="topListItem" onClick={handleLogout}>
+          <li className="topListItem logout" onClick={handleLogout}>
               {user && "LOGOUT"}
           </li>
         </ul>

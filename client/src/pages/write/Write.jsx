@@ -75,7 +75,7 @@ export default function Write() {
           ></textarea>
         </div>
         <button className="writeSubmit" type="submit">
-          Publish
+          Publish <i class="fa-solid fa-upload"></i>
         </button>
       </form>
     </div>

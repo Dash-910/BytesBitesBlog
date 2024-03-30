@@ -99,6 +99,7 @@ export default function Settings() {
           <label>Password</label>
           <input
             type="password"
+            placeholder="Input New password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="settingsSubmit" type="submit">
@@ -106,7 +107,7 @@ export default function Settings() {
           </button>
           {success && (
             <span
-              style={{ color: "green", textAlign: "center", marginTop: "20px" }}
+              className="success"
             >
               Profile has been updated...
             </span>

@@ -69,6 +69,7 @@ export default function SinglePost() {
               className="singlePostTitleInput"
               autoFocus
               onChange={(e)=> setTitle(e.target.value)}
+              style={{backgroundColor:'black',color:'white',textdecoration:'none'}}
           />
         ):(
           <h1 className="singlePostTitle">
@@ -101,6 +102,7 @@ export default function SinglePost() {
             className="singlePostDescInput"
             value = {desc}
             onChange={(e)=> setDesc(e.target.value)}
+            style={{backgroundColor:'black',color:'white'}}
           />
         ) : (
             <p className="singlePostDesc">{desc}</p>

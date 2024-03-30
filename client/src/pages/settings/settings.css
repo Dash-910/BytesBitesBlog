@@ -9,11 +9,13 @@
     display : flex;
     align-items: center;
     justify-content: space-between;
+    font-family:'Roboto', sans-serif;
 }
 .settingsUpdateTitle{
     font-size : 30px;
     margin-bottom: 20px;
     color : lightcoral;
+    font-family:'Roboto', sans-serif;
 }
 .settingsDeleteTitle{
     color : red;
@@ -23,6 +25,7 @@
 .settingsForm{
     display: flex;
     flex-direction: column;
+    font-family:'Roboto', sans-serif;
 }
 .settingsPP{
     display : flex;
@@ -31,8 +34,8 @@
 
 }
 .settingsPP > img{
-    width : 70px;
-    height : 70px;
+    width : 150px;
+    height : 150px;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -54,15 +57,33 @@
     height : 30px;
     border: none;
     border-bottom: 1px solid lightgray;
+    font-family:'Roboto', sans-serif;
+    width: 400px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 17px;
+}
+.settingsForm >input:focus{
+    border-color : rgb(5, 164, 79);
+    box-shadow: 0 0 10px rgb(102, 102, 106);
 }
 .settingsSubmit{
-    width : 150px;
-    align-self: center;
-    border :none;
-    border-radius : 10px;
-    color : white;
-    background-color: teal;
-    padding : 10px;
-    margin-top : 15px;
+    margin-top : 20px;
     cursor : pointer;
+    background-color: teal;
+    border : none;
+    color : white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-family:'Roboto', sans-serif;
+    width: 150px;
+}
+.settingsSubmit:hover{
+    background-color: rgb(6, 92, 92);
+    transform: translateY(-1px);
+    transition: background 0.5s,transform 0.5s;
+}
+.success{
+    border: solid red 2px;
 }

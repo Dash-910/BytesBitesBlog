@@ -6,8 +6,10 @@ import Register from "./pages/register/Register";
 import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
+import About from "./pages/about/About";
 import { Context } from "./context/Context";
 import {useContext} from "react";
+
 
 function App() {
   const { user } = useContext(Context);
@@ -21,6 +23,7 @@ function App() {
         <Route exact path="/write" element={user ? <Write /> : <Register />} />
         <Route exact path="/settings" element={user ? <Settings /> : <Register />} />
         <Route exact path="/posts/:postId" element={<Single />} />
+        <Route exact path="/about" element={<About />} />
       </Routes>
     </Router> 
   );
