@@ -88,6 +88,9 @@
     font-size : 18px;
     color:#666;
     cursor : pointer;
-    margin-left : 15px;
+    margin-left : 35px;
 }
-
+.fa-solid{
+    margin-right: 24px;
+    font-size: 20px;
+}

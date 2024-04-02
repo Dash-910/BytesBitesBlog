@@ -1,8 +1,7 @@
-.posts {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; /* Ensure items are displayed horizontally */
-    justify-content: space-between;
-    margin: 20px;
-    /* border: solid red 3px; */
+.posts{
+    flex : 9;
+    display : flex;
+    flex-wrap : wrap;
+    margin : 20px ;
+    gap:20px;
 }

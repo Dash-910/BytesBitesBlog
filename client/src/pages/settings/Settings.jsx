@@ -12,10 +12,13 @@ export default function Settings() {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
 
+
   //  const navigate = useNavigate();
 
   const { user, dispatch } = useContext(Context);
   const PF = "http://localhost:5000/images/"
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,14 +90,21 @@ export default function Settings() {
           <label>Username</label>
           <input
             type="text"
-            placeholder={user.username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder= {user.username}
+            onChange={(e) => {
+              const value = e.target.value;
+              if(value.trim()!==''){
+                setUsername(value);
+              }
+            }}
+      
           />
           <label>Email</label>
           <input
             type="email"
-            placeholder={user.email}
+            placeholder= {user.email}
             onChange={(e) => setEmail(e.target.value)}
+           
           />
           <label>Password</label>
           <input

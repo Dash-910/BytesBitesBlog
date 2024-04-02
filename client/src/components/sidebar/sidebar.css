@@ -40,6 +40,8 @@
 }
 .sidebarItem > p {
     padding:5px;
+    font-weight: 100;
+    /* border :solid red 1px; */
 }
 .sidebarimg{
     margin-top : 15px;

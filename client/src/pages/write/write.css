@@ -59,12 +59,16 @@
     padding : 10px;
     margin-top: 20px;
     margin-right: 30px;
-    width: 120px;
+    width: 140px;
     font-family:'Roboto', sans-serif;
     font-size: 17px;
+    transition: background 0.5s,transform 0.5s;
 }
 .writeSubmit:hover{
     background-color: rgb(244, 99, 99);
     transform: translateY(-2px);
-    transition: background 0.5s,transform 0.5s;
+}
+.fa-solid.fa-upload{
+    margin-left:10px;
+    margin-right:5px;
 }
